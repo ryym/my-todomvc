@@ -1,7 +1,12 @@
+import * as React from 'react';
+import { render } from 'react-dom';
+
 import 'todomvc-app-css/index.css';
 
-export const greet = (name: string): string => {
-  return `Hello, ${name}!`;
-};
+const App = () => (
+  <div>
+    <h1>Hello world from React</h1>
+  </div>
+);
 
-console.log(greet('world'));
+render(<App />, document.getElementById('root'));
