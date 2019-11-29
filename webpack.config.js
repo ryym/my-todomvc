@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.css/,
-        include: SRC,
+        include: [SRC, path.join(ROOT, 'node_modules/todomvc-app-css')],
         use: [
           { loader: 'style-loader' },
           {

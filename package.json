@@ -5,6 +5,7 @@
     "start": "npx webpack-dev-server"
   },
   "dependencies": {
+    "todomvc-app-css": "^2.3.0",
     "typescript": "3.4.3"
   },
   "devDependencies": {
