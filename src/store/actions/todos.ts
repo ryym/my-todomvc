@@ -1,16 +1,23 @@
-import { defineActions, effect } from 'redy';
+import { defineActions, effectUsing } from 'redy';
+import { Thunk } from '../thunk';
 
-let _globalTodoId = 1;
+const makeIdGenerator = () => {
+  let _id = 1;
+  return () => _id++;
+};
 
 export const $todos = defineActions('todos', {
-  AddNew: effect((title: string) => async dispatch => {
-    if (title != null) {
-      title = title.trim();
-      if (title.length > 0) {
-        dispatch($todos.Add(_globalTodoId++, title));
+  AddNew: effectUsing(
+    () => ({ genId: makeIdGenerator() }),
+    d => (title: string): Thunk => async dispatch => {
+      if (title != null) {
+        title = title.trim();
+        if (title.length > 0) {
+          dispatch($todos.Add(d.genId(), title));
+        }
       }
     }
-  }),
+  ),
 
   Add: (id: number, title: string) => ({ id, title }),
 
