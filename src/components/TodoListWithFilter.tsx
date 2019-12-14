@@ -8,11 +8,12 @@ export const TodoListWithFilter = connect(
   ({ todos }) => {
     return {
       hasTodos: todos.length > 0,
+      isAllCompleted: todos.every(t => t.completed),
       activeCount: todos.filter(t => !t.completed).length,
     };
   },
 
-  function TodoListWithFilter({ dispatch, hasTodos, activeCount }) {
+  function TodoListWithFilter({ dispatch, hasTodos, isAllCompleted, activeCount }) {
     if (!hasTodos) {
       return null;
     }
@@ -23,6 +24,7 @@ export const TodoListWithFilter = connect(
             id="toggle-all"
             className="toggle-all"
             type="checkbox"
+            checked={isAllCompleted}
             onChange={event => {
               dispatch($todos.ToggleCompletedAll(event.currentTarget.checked));
             }}
