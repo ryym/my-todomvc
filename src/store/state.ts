@@ -6,7 +6,16 @@ export interface State {
   readonly filters: FiltersState;
 }
 
+export const initState = (): State => {
+  return {
+    todos: initTodosState(),
+    filters: initFilters(),
+  };
+};
+
 export type TodosState = Todos;
+
+export const initTodosState = Todos.init;
 
 export interface FiltersState {
   readonly todoState: TodoState.Value;
