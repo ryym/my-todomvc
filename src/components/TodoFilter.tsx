@@ -27,6 +27,7 @@ export const TodoFilter = connect(
               <a
                 className={classNames({ selected: todoState === currentTodoState })}
                 href={TodoState.toHash(todoState)}
+                data-value={todoState}
               >
                 {todoStateLabel(todoState)}
               </a>

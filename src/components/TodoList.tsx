@@ -17,7 +17,9 @@ export const TodoList = connect(
           setEditedTodoId(state.id);
           break;
         case 'EditEnd':
-          setEditedTodoId(null);
+          if (editedTodoId != null) {
+            setEditedTodoId(null);
+          }
           break;
       }
     };

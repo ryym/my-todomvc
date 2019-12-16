@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<ul
+  className="todo-list"
+>
+  <li
+    className=""
+  >
+    <div
+      className="view"
+    >
+      <input
+        checked={false}
+        className="toggle"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        data-testid="title-label"
+        onDoubleClick={[Function]}
+      >
+        hello
+      </label>
+      <button
+        className="destroy"
+        onClick={[Function]}
+      />
+    </div>
+    <input
+      className="edit"
+      data-testid="title-edit"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      type="text"
+      value="hello"
+    />
+  </li>
+</ul>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<input
+  autoFocus={true}
+  className="new-todo"
+  data-testid="new-todo"
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  placeholder="What needs to be done?"
+  type="text"
+  value=""
+/>
+`;

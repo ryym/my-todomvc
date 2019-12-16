@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<ul
+  className="filters"
+>
+  <li>
+    <a
+      className="selected"
+      data-value="All"
+      href="#/"
+    >
+      All
+    </a>
+  </li>
+  <li>
+    <a
+      className=""
+      data-value="Active"
+      href="#/active"
+    >
+      Active
+    </a>
+  </li>
+  <li>
+    <a
+      className=""
+      data-value="Completed"
+      href="#/completed"
+    >
+      Completed
+    </a>
+  </li>
+</ul>
+`;
