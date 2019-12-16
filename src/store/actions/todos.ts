@@ -1,14 +1,14 @@
 import { defineActions, effectUsing } from 'redy';
 import { Thunk } from '../thunk';
 
-const makeIdGenerator = () => {
-  let _id = 1;
-  return () => _id++;
-};
+// const makeIdGenerator = () => {
+//   let _id = 1;
+//   return () => _id++;
+// };
 
 export const $todos = defineActions('todos', {
   AddNew: effectUsing(
-    () => ({ genId: makeIdGenerator() }),
+    () => ({ genId: () => Date.now() }),
     d => (title: string): Thunk => async dispatch => {
       if (title != null) {
         title = title.trim();
