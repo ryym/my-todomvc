@@ -1,11 +1,6 @@
 import { defineActions, effectUsing } from 'redy';
 import { Thunk } from '../thunk';
 
-// const makeIdGenerator = () => {
-//   let _id = 1;
-//   return () => _id++;
-// };
-
 export const $todos = defineActions('todos', {
   AddNew: effectUsing(
     () => ({ genId: () => Date.now() }),
